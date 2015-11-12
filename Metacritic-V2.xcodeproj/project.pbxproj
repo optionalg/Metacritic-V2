@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4738BFFF1BF490EC00904A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738BFFE1BF490EC00904A70 /* AppDelegate.swift */; };
+		4738C0021BF490EC00904A70 /* Metacritic_V2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4738C0001BF490EC00904A70 /* Metacritic_V2.xcdatamodeld */; };
+		4738C0041BF490EC00904A70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738C0031BF490EC00904A70 /* ViewController.swift */; };
+		4738C0071BF490EC00904A70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4738C0051BF490EC00904A70 /* Main.storyboard */; };
+		4738C0091BF490EC00904A70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4738C0081BF490EC00904A70 /* Images.xcassets */; };
+		4738C00C1BF490EC00904A70 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4738C00A1BF490EC00904A70 /* LaunchScreen.xib */; };
+		4738C0181BF490EC00904A70 /* Metacritic_V2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738C0171BF490EC00904A70 /* Metacritic_V2Tests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4738C0121BF490EC00904A70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4738BFF11BF490EC00904A70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4738BFF81BF490EC00904A70;
+			remoteInfo = "Metacritic-V2";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4738BFF91BF490EC00904A70 /* Metacritic-V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metacritic-V2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4738BFFD1BF490EC00904A70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4738BFFE1BF490EC00904A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4738C0011BF490EC00904A70 /* Metacritic_V2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Metacritic_V2.xcdatamodel; sourceTree = "<group>"; };
+		4738C0031BF490EC00904A70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4738C0061BF490EC00904A70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4738C0081BF490EC00904A70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4738C00B1BF490EC00904A70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4738C0111BF490EC00904A70 /* Metacritic-V2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Metacritic-V2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4738C0161BF490EC00904A70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4738C0171BF490EC00904A70 /* Metacritic_V2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metacritic_V2Tests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4738BFF61BF490EC00904A70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4738C00E1BF490EC00904A70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4738BFF01BF490EC00904A70 = {
+			isa = PBXGroup;
+			children = (
+				4738BFFB1BF490EC00904A70 /* Metacritic-V2 */,
+				4738C0141BF490EC00904A70 /* Metacritic-V2Tests */,
+				4738BFFA1BF490EC00904A70 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4738BFFA1BF490EC00904A70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4738BFF91BF490EC00904A70 /* Metacritic-V2.app */,
+				4738C0111BF490EC00904A70 /* Metacritic-V2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4738BFFB1BF490EC00904A70 /* Metacritic-V2 */ = {
+			isa = PBXGroup;
+			children = (
+				4738BFFE1BF490EC00904A70 /* AppDelegate.swift */,
+				4738C0031BF490EC00904A70 /* ViewController.swift */,
+				4738C0051BF490EC00904A70 /* Main.storyboard */,
+				4738C0081BF490EC00904A70 /* Images.xcassets */,
+				4738C00A1BF490EC00904A70 /* LaunchScreen.xib */,
+				4738C0001BF490EC00904A70 /* Metacritic_V2.xcdatamodeld */,
+				4738BFFC1BF490EC00904A70 /* Supporting Files */,
+			);
+			path = "Metacritic-V2";
+			sourceTree = "<group>";
+		};
+		4738BFFC1BF490EC00904A70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4738BFFD1BF490EC00904A70 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4738C0141BF490EC00904A70 /* Metacritic-V2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4738C0171BF490EC00904A70 /* Metacritic_V2Tests.swift */,
+				4738C0151BF490EC00904A70 /* Supporting Files */,
+			);
+			path = "Metacritic-V2Tests";
+			sourceTree = "<group>";
+		};
+		4738C0151BF490EC00904A70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4738C0161BF490EC00904A70 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4738BFF81BF490EC00904A70 /* Metacritic-V2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4738C01B1BF490EC00904A70 /* Build configuration list for PBXNativeTarget "Metacritic-V2" */;
+			buildPhases = (
+				4738BFF51BF490EC00904A70 /* Sources */,
+				4738BFF61BF490EC00904A70 /* Frameworks */,
+				4738BFF71BF490EC00904A70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Metacritic-V2";
+			productName = "Metacritic-V2";
+			productReference = 4738BFF91BF490EC00904A70 /* Metacritic-V2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4738C0101BF490EC00904A70 /* Metacritic-V2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4738C01E1BF490EC00904A70 /* Build configuration list for PBXNativeTarget "Metacritic-V2Tests" */;
+			buildPhases = (
+				4738C00D1BF490EC00904A70 /* Sources */,
+				4738C00E1BF490EC00904A70 /* Frameworks */,
+				4738C00F1BF490EC00904A70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4738C0131BF490EC00904A70 /* PBXTargetDependency */,
+			);
+			name = "Metacritic-V2Tests";
+			productName = "Metacritic-V2Tests";
+			productReference = 4738C0111BF490EC00904A70 /* Metacritic-V2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4738BFF11BF490EC00904A70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Ajay Raj";
+				TargetAttributes = {
+					4738BFF81BF490EC00904A70 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					4738C0101BF490EC00904A70 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 4738BFF81BF490EC00904A70;
+					};
+				};
+			};
+			buildConfigurationList = 4738BFF41BF490EC00904A70 /* Build configuration list for PBXProject "Metacritic-V2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4738BFF01BF490EC00904A70;
+			productRefGroup = 4738BFFA1BF490EC00904A70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4738BFF81BF490EC00904A70 /* Metacritic-V2 */,
+				4738C0101BF490EC00904A70 /* Metacritic-V2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4738BFF71BF490EC00904A70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4738C0071BF490EC00904A70 /* Main.storyboard in Resources */,
+				4738C00C1BF490EC00904A70 /* LaunchScreen.xib in Resources */,
+				4738C0091BF490EC00904A70 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4738C00F1BF490EC00904A70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4738BFF51BF490EC00904A70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4738C0041BF490EC00904A70 /* ViewController.swift in Sources */,
+				4738C0021BF490EC00904A70 /* Metacritic_V2.xcdatamodeld in Sources */,
+				4738BFFF1BF490EC00904A70 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4738C00D1BF490EC00904A70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4738C0181BF490EC00904A70 /* Metacritic_V2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4738C0131BF490EC00904A70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4738BFF81BF490EC00904A70 /* Metacritic-V2 */;
+			targetProxy = 4738C0121BF490EC00904A70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4738C0051BF490EC00904A70 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4738C0061BF490EC00904A70 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4738C00A1BF490EC00904A70 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4738C00B1BF490EC00904A70 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4738C0191BF490EC00904A70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4738C01A1BF490EC00904A70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4738C01C1BF490EC00904A70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Metacritic-V2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4738C01D1BF490EC00904A70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Metacritic-V2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4738C01F1BF490EC00904A70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Metacritic-V2Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Metacritic-V2.app/Metacritic-V2";
+			};
+			name = Debug;
+		};
+		4738C0201BF490EC00904A70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Metacritic-V2Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Metacritic-V2.app/Metacritic-V2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4738BFF41BF490EC00904A70 /* Build configuration list for PBXProject "Metacritic-V2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4738C0191BF490EC00904A70 /* Debug */,
+				4738C01A1BF490EC00904A70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4738C01B1BF490EC00904A70 /* Build configuration list for PBXNativeTarget "Metacritic-V2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4738C01C1BF490EC00904A70 /* Debug */,
+				4738C01D1BF490EC00904A70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4738C01E1BF490EC00904A70 /* Build configuration list for PBXNativeTarget "Metacritic-V2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4738C01F1BF490EC00904A70 /* Debug */,
+				4738C0201BF490EC00904A70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4738C0001BF490EC00904A70 /* Metacritic_V2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4738C0011BF490EC00904A70 /* Metacritic_V2.xcdatamodel */,
+			);
+			currentVersion = 4738C0011BF490EC00904A70 /* Metacritic_V2.xcdatamodel */;
+			path = Metacritic_V2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4738BFF11BF490EC00904A70 /* Project object */;
+}
