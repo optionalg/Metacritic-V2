@@ -35,13 +35,18 @@ class trailerAPIService{
             if ((jsonError) != nil){
                 print(jsonError?.localizedDescription)
             }
-            println(jsonResult!.count)
-            var code : String = jsonResult![0]["code"] as! String
-            
-            println(code)
-            //var fst : Int? = code.indexOfCharacter("-") as Int?
-            let tmp : NSString = code as NSString
-            code = tmp.substringWithRange(NSRange(location: 67, length: 11))
+            var code : String
+            if jsonResult?.count > 0 {
+                code = jsonResult![0]["code"] as! String
+                
+                println(code)
+                //var fst : Int? = code.indexOfCharacter("-") as Int?
+                let tmp : NSString = code as NSString
+                code = tmp.substringWithRange(NSRange(location: 67, length: 11))
+            } else{
+                code = "empty"
+            }
+   
             if let apiDelegate = self.delegate {
                 apiDelegate.didFinishTrailer(code)
                 
