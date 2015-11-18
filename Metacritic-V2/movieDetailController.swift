@@ -19,7 +19,7 @@ class movieDetailController: UIViewController, searchServiceDelegate, trailerAPI
     lazy var trailerAPI : trailerAPIService = trailerAPIService(delegate: self)
     
     var tempMovie = sMovie()
-
+    var movieScore : NSNumber =  0
     // CONSTS
     struct reviewType{
         static let critics: String = "criticReviews"
@@ -34,11 +34,37 @@ class movieDetailController: UIViewController, searchServiceDelegate, trailerAPI
     
     
     @IBAction func addMovie(sender: AnyObject) {
-        let alertController = UIAlertController(title: "Rate It", message: "Rate the Movie that your adding to favourites", preferredStyle: .Alert)
-        let defaultAction = UIAlertAction(title:"OK",style:.Default, handler:nil)
-        alertController.addAction(defaultAction)
-        presentViewController(alertController,animated:true,completion:nil)
-        let entityDescription = NSEntityDescription.entityForName("Movie", inManagedObjectContext: managedObjectContext!)
+     ///// - move in method
+        
+        let alertController = UIAlertController(title: tempMovie.name, message: "Please Rate the film", preferredStyle: .Alert)
+        let buttonOne = UIAlertAction(title:"Excellent",style: .Default, handler:{ (action) -> Void in
+        self.coreDataAdd(5)
+        })
+        let buttonTwo = UIAlertAction(title:"Good",style: .Default, handler:{ (action) -> Void in
+            self.coreDataAdd(4)
+        })
+        let buttonThree = UIAlertAction(title:"Average",style: .Default, handler:{ (action) -> Void in
+            self.coreDataAdd(3)
+        })
+        let buttonFour = UIAlertAction(title:"Bad",style: .Default, handler:{ (action) -> Void in
+            self.coreDataAdd(2)
+        })
+        let buttonFive = UIAlertAction(title:"Terrible",style: .Default, handler:{ (action) -> Void in
+            self.coreDataAdd(1)
+        })
+        let buttonCancel = UIAlertAction(title:"Cancel",style: .Default, handler:{ (action) -> Void in
+            return
+        })
+        alertController.addAction(buttonOne)
+        alertController.addAction(buttonTwo)
+        alertController.addAction(buttonThree)
+        alertController.addAction(buttonFour)
+        alertController.addAction(buttonFive)
+        alertController.addAction(buttonCancel)
+        
+        presentViewController(alertController, animated:true, completion: nil)
+    /////
+        
 //        let movie = Movie(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
 //        //let movie = NSEntityDescription.insertNewObjectForEntityForName("Movie", inManagedObjectContext: self.managedObjectContext!) as! Movie
 //        movie.name = tempMovie.name
@@ -54,22 +80,28 @@ class movieDetailController: UIViewController, searchServiceDelegate, trailerAPI
 //        movie.rlsdate = tempMovie.rlsDate
 //        movie.url = tempMovie.name
 //        println(movie.url)
-        if let moc = self.managedObjectContext{
-        Movie.createMoviesManagedObjectContext(moc, name: tempMovie.name, url: tempMovie.url, rlsDate: tempMovie.rlsDate, score: tempMovie.score, summary: tempMovie.summary, rating: tempMovie.rating, cast: tempMovie.cast, genre: tempMovie.genre, avgUserScore: tempMovie.avgUserScore, runtime: tempMovie.runtime, personalScore: 1, director: self.movieDetail["director"] as! String,thumbnail: self.movieDetail["thumbnail"] as! String)
-        var error: NSError?
-        managedObjectContext?.save(&error)
-        
-        if let err = error{
-            println(err.localizedFailureReason)
-        }else{
-            println("success")
-        }
-        }
         
     }
     
     //
     
+    
+    func coreDataAdd(score: NSNumber){
+        let entityDescription = NSEntityDescription.entityForName("Movie", inManagedObjectContext: managedObjectContext!)
+        if let moc = self.managedObjectContext{
+            Movie.createMoviesManagedObjectContext(moc, name: tempMovie.name, url: tempMovie.url, rlsDate: tempMovie.rlsDate, score: tempMovie.score, summary: tempMovie.summary, rating: tempMovie.rating, cast: tempMovie.cast, genre: tempMovie.genre, avgUserScore: tempMovie.avgUserScore, runtime: tempMovie.runtime, personalScore: self.movieScore, director: self.movieDetail["director"] as! String,thumbnail: self.movieDetail["thumbnail"] as! String)
+            var error: NSError?
+            managedObjectContext?.save(&error)
+            
+            if let err = error{
+                println(err.localizedFailureReason)
+            }else{
+                println("success")
+            }
+        }
+        
+        
+    }
     
     
     override func viewDidLoad() {
