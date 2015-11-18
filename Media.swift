@@ -18,6 +18,7 @@ class Media: NSManagedObject {
     @NSManaged var summary: String
     @NSManaged var thumbnail: String
     @NSManaged var url: String
-    @NSManaged var userScore: NSNumber
+    @NSManaged var userScore: String
+    @NSManaged var personalScore : NSNumber
 
 }

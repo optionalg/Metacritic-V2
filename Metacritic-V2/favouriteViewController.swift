@@ -43,10 +43,8 @@ class favouriteViewController: UIViewController,UITableViewDataSource,UITableVie
             
             // Delete it from the managedObjectContext
             managedObjectContext?.deleteObject(logItemToDelete)
-            movie.removeAtIndex(indexPath.row)
             // Refresh the table view to indicate that it's deleted
-            tableView.reloadData()
-            
+            self.fetchData()
             // Tell the table view to animate out that row
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         }

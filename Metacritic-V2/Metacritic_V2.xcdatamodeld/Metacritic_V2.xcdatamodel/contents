@@ -9,12 +9,13 @@
     <entity name="Media" representedClassName="Metacritic_V2.Media" isAbstract="YES" syncable="YES">
         <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personalScore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="rlsdate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="thumbnail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="userScore" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="userScore" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Movie" representedClassName="Metacritic_V2.Movie" parentEntity="Media" syncable="YES">
         <attribute name="cast" optional="YES" attributeType="String" syncable="YES"/>
@@ -27,7 +28,7 @@
     </entity>
     <elements>
         <element name="Game" positionX="412" positionY="1269" width="128" height="105"/>
-        <element name="Media" positionX="268" positionY="1035" width="128" height="165"/>
+        <element name="Media" positionX="268" positionY="1035" width="128" height="180"/>
         <element name="Movie" positionX="261" positionY="1269" width="128" height="105"/>
         <element name="Music" positionX="97" positionY="1271" width="128" height="60"/>
     </elements>
