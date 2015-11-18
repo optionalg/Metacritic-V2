@@ -18,7 +18,7 @@ class movieDetailController: UIViewController, searchServiceDelegate, trailerAPI
     lazy var api: searchService = searchService(delegate: self)
     lazy var trailerAPI : trailerAPIService = trailerAPIService(delegate: self)
     
-    var tempMovie    
+    var tempMovie = sMovie()
     
     // CONSTS
     struct reviewType{
@@ -38,17 +38,17 @@ class movieDetailController: UIViewController, searchServiceDelegate, trailerAPI
         let movie = Movie(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
         //let movie = NSEntityDescription.insertNewObjectForEntityForName("Movie", inManagedObjectContext: self.managedObjectContext!) as! Movie
         movie.name = tempMovie.name
-        movie.score = "s"
-        movie.genre = "g"
-        movie.thumbnail = "t"
+        movie.score = tempMovie.score
+        movie.genre = tempMovie.genre
+        movie.thumbnail = self.movieDetail["thumbnail"] as! String
         movie.userScore = 1.2
-        movie.summary = "s"
-        movie.runtime = "r"
-        movie.director = "d"
-        movie.cast = "c"
-        movie.rating = "r"
-        movie.rlsdate = "r"
-        movie.url = "u"
+        movie.summary = tempMovie.summary
+        movie.runtime = tempMovie.runtime
+        movie.director = self.movieDetail["director"] as! String
+        movie.cast = tempMovie.cast
+        movie.rating = tempMovie.rating
+        movie.rlsdate = tempMovie.rlsDate
+        movie.url = tempMovie.name
         println(movie.url)
         var error: NSError?
         managedObjectContext?.save(&error)
@@ -60,9 +60,6 @@ class movieDetailController: UIViewController, searchServiceDelegate, trailerAPI
         }
         
     }
-    
-    
-    
     
     //
     

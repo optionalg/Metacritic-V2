@@ -18,9 +18,20 @@ struct sMovie{
     var cast : String
     var genre : String
     var avgUserScore : String
-    var runtime : String
+    var runtime : String = ""
 
-    
+    init (){
+        self.name = ""
+        self.url = ""
+        self.rlsDate = ""
+        self.score = ""
+        self.summary = ""
+        self.rating = ""
+        self.cast = ""
+        self.genre = ""
+        self.avgUserScore = ""
+        self.runtime = ""
+    }
     init(name : String, url:String, rlsDate : String, score: String, summary:String,rating:String, cast:String, genre: String, avgUserScore: String, runtime: String){
         self.name = name
         self.url = url

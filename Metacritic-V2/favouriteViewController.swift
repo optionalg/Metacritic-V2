@@ -13,9 +13,17 @@ class favouriteViewController: UIViewController,UITableViewDataSource,UITableVie
     @IBOutlet weak var tableView: UITableView!
     
     var movie = [NSManagedObject]()
-    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     override func viewDidAppear(animated: Bool) {
+        fetchData()
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+
+    }
+    func fetchData(){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: "Media")
@@ -25,10 +33,23 @@ class favouriteViewController: UIViewController,UITableViewDataSource,UITableVie
         movie = results as! [NSManagedObject]
         tableView.reloadData()
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if(editingStyle == .Delete ) {
+            // Find the LogItem object the user is trying to delete
+            let logItemToDelete = movie[indexPath.row]
+            
+            // Delete it from the managedObjectContext
+            managedObjectContext?.deleteObject(logItemToDelete)
+            movie.removeAtIndex(indexPath.row)
+            // Refresh the table view to indicate that it's deleted
+            tableView.reloadData()
+            
+            // Tell the table view to animate out that row
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
     }
     
     func tableView(tableView: UITableView,
