@@ -95,7 +95,7 @@ class movieViewController: UIViewController,searchServiceDelegate, UITableViewDa
             
             var detailViewController = segue.destinationViewController as! movieDetailController
             detailViewController.title = temp.name
-            detailViewController.filmTitle = temp.name
+            detailViewController.tempMovie = temp
         }
     }
     

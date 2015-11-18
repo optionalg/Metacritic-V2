@@ -24,7 +24,7 @@ class userReviewController: UIViewController, searchServiceDelegate, UITableView
         println(url)
         api.delegate = self
         api.searchMetacritic(url!, typeTerm:type!)
-}
+    }
     
     func didFinishSearch(results: NSDictionary) {
         //println(results)

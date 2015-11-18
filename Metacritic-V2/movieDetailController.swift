@@ -8,16 +8,17 @@
 
 
 import UIKit
-
+import CoreData
 
 class movieDetailController: UIViewController, searchServiceDelegate, trailerAPIServiceDelegate {
     
     
     @IBOutlet weak var imgView: UIImageView!
-    var filmTitle: String?
     var movieDetail: NSDictionary = NSDictionary()
     lazy var api: searchService = searchService(delegate: self)
     lazy var trailerAPI : trailerAPIService = trailerAPIService(delegate: self)
+    
+    var tempMovie    
     
     // CONSTS
     struct reviewType{
@@ -28,14 +29,51 @@ class movieDetailController: UIViewController, searchServiceDelegate, trailerAPI
     //
     
     
+    // CORE DATA
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
+    
+    @IBAction func addMovie(sender: AnyObject) {
+        let entityDescription = NSEntityDescription.entityForName("Movie", inManagedObjectContext: managedObjectContext!)
+        let movie = Movie(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
+        //let movie = NSEntityDescription.insertNewObjectForEntityForName("Movie", inManagedObjectContext: self.managedObjectContext!) as! Movie
+        movie.name = tempMovie.name
+        movie.score = "s"
+        movie.genre = "g"
+        movie.thumbnail = "t"
+        movie.userScore = 1.2
+        movie.summary = "s"
+        movie.runtime = "r"
+        movie.director = "d"
+        movie.cast = "c"
+        movie.rating = "r"
+        movie.rlsdate = "r"
+        movie.url = "u"
+        println(movie.url)
+        var error: NSError?
+        managedObjectContext?.save(&error)
+        
+        if let err = error{
+            println(err.localizedFailureReason)
+        }else{
+            println("success")
+        }
+        
+    }
+    
+    
+    
+    
+    //
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(filmTitle)
         api.delegate = self
-        api.searchMetacritic(filmTitle!, typeTerm: "movieDetail")
+        api.searchMetacritic(tempMovie.name, typeTerm: "movieDetail")
         trailerAPI.delegate = self
-        trailerAPI.searchTrailerApi(filmTitle!)
+        trailerAPI.searchTrailerApi(tempMovie.name)
         //imageFromPath(self.movieDetail["thumbnail"] as! String)
     }
     
