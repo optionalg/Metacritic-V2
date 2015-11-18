@@ -34,6 +34,10 @@ class movieDetailController: UIViewController, searchServiceDelegate, trailerAPI
     
     
     @IBAction func addMovie(sender: AnyObject) {
+        let alertController = UIAlertController(title: "Rate It", message: "Rate the Movie that your adding to favourites", preferredStyle: .Alert)
+        let defaultAction = UIAlertAction(title:"OK",style:.Default, handler:nil)
+        alertController.addAction(defaultAction)
+        presentViewController(alertController,animated:true,completion:nil)
         let entityDescription = NSEntityDescription.entityForName("Movie", inManagedObjectContext: managedObjectContext!)
 //        let movie = Movie(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
 //        //let movie = NSEntityDescription.insertNewObjectForEntityForName("Movie", inManagedObjectContext: self.managedObjectContext!) as! Movie
