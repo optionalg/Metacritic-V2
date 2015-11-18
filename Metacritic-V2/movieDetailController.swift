@@ -53,7 +53,7 @@ class movieDetailController: UIViewController, searchServiceDelegate, trailerAPI
     }
     
     func didFinishSearch(results: NSDictionary) {
-        //
+        // <-- PUT TRY CATCH
         self.movieDetail = results["result"] as! NSDictionary
         //println(self.movieDetail)
         imageFromPath(self.movieDetail["thumbnail"] as! String)

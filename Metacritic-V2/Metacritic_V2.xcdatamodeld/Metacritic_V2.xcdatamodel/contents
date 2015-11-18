@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Game" parentEntity="Media" syncable="YES">
+        <attribute name="developer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="platform" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publisher" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Media" isAbstract="YES" syncable="YES">
         <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -16,8 +22,13 @@
         <attribute name="rating" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="runtime" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Music" parentEntity="Media" syncable="YES">
+        <attribute name="artist" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Media" positionX="268" positionY="1035" width="128" height="163"/>
         <element name="Movie" positionX="261" positionY="1269" width="128" height="103"/>
+        <element name="Music" positionX="97" positionY="1271" width="128" height="58"/>
+        <element name="Game" positionX="412" positionY="1269" width="128" height="103"/>
     </elements>
 </model>
